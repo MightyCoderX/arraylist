@@ -101,7 +101,7 @@ void arraylist_remove(ArrayList* p_arraylist, long index) {
 
     size_t u_index = arraylist_normalize_index(p_arraylist->len, index);
 
-    for(size_t i = u_index; i < p_arraylist->len; i++) {
+    for(size_t i = u_index; i < p_arraylist->len - 1; i++) {
         p_arraylist->data[i] = p_arraylist->data[i + 1];
     }
 
