@@ -55,7 +55,7 @@ size_t arraylist_normalize_index(size_t len, long index) {
     return u_index;
 }
 
-int arraylist_get(ArrayList* p_arraylist, long index) {
+int arraylist_get(const ArrayList* p_arraylist, long index) {
     size_t u_index = arraylist_normalize_index(p_arraylist->len, index);
 
     return p_arraylist->data[u_index];
@@ -108,7 +108,7 @@ void arraylist_remove(ArrayList* p_arraylist, long index) {
     p_arraylist->len = new_len;
 }
 
-long arraylist_indexof(ArrayList* p_arraylist, int value) {
+long arraylist_indexof(const ArrayList* p_arraylist, int value) {
     for(size_t i = 0; i < p_arraylist->len; i++) {
         if(p_arraylist->data[i] == value) {
             return i;
@@ -118,7 +118,7 @@ long arraylist_indexof(ArrayList* p_arraylist, int value) {
     return -1;
 }
 
-void arraylist_print(ArrayList* p_arraylist) {
+void arraylist_print(const ArrayList* p_arraylist) {
     for(size_t i = 0; i < p_arraylist->len; i++) {
         if(i == 0) {
             printf("[");

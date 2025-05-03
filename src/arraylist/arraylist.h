@@ -17,15 +17,15 @@ void arraylist_extend(ArrayList* p_arraylist, size_t new_len, bool should_copy_o
 
 size_t arraylist_normalize_index(size_t len, long index);
 
-int arraylist_get(ArrayList* p_arraylist, long index);
+int arraylist_get(const ArrayList* p_arraylist, long index);
 void arraylist_set(ArrayList* p_arraylist, long index, int value);
 
 void arraylist_append(ArrayList* p_arraylist, int value);
 void arraylist_insert(ArrayList* p_arraylist, long index, int value);
 void arraylist_remove(ArrayList* p_arraylist, long index);
 
-long arraylist_indexof(ArrayList* p_arraylist, int value);
+long arraylist_indexof(const ArrayList* p_arraylist, int value);
 
-void arraylist_print(ArrayList* p_arraylist);
+void arraylist_print(const ArrayList* p_arraylist);
 
 #endif // !ARRAYLIST
