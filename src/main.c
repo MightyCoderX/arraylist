@@ -30,6 +30,7 @@ int main(int argc, char** argv) {
     arraylist_remove(&arraylist, -1);
 
     arraylist_print(&arraylist);
+    arraylist_free(&arraylist);
 
     return 0;
 }

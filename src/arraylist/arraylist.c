@@ -132,3 +132,10 @@ void arraylist_print(const ArrayList* p_arraylist) {
         }
     }
 }
+
+void arraylist_free(ArrayList* p_arraylist) {
+    free(p_arraylist->data);
+    p_arraylist->data = NULL;
+    p_arraylist->len = 0;
+    p_arraylist->capacity = 0;
+}

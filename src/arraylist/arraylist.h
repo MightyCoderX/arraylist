@@ -28,4 +28,5 @@ long arraylist_indexof(const ArrayList* p_arraylist, int value);
 
 void arraylist_print(const ArrayList* p_arraylist);
 
+void arraylist_free(ArrayList* p_arraylist);
 #endif // !ARRAYLIST
